@@ -15,7 +15,7 @@ module ForeignDomainRouting
 
   def self.foreign_domain?(host)
     native_domains.each do |domain|
-      return false if host =~ /#{domain}\Z/i
+      return false if host =~ /^#{domain}\Z/i
     end
     true
   end
